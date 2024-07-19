@@ -22,9 +22,16 @@
     <!-- Barra de navegación con enlaces -->
     <nav>
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About me</a></li>
-            <li><a href="https://www.youtube.com/watch?v=7JI0zSLq_xw&ab_channel=penguinz0">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About me</a></li>
+            <li>
+                <a href="contact.html">Contact</a>
+                <ul>
+                    <li><a href="linkinstagram.com">Instagram</a></li>
+                    <li><a href="linkpagina.com">Facebook</a></li>
+                    <li><a href="linkpagina.com">Twitter</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <!-- Contenido principal de la página -->
@@ -42,9 +49,75 @@
             </a></p>
         </section>
     </main>
+
+    <div class="slider-container">
+        <div class="slider-content">
+            <div class="slider-item">
+                <img src="https://picsum.photos/200/300?random=1" alt="Imagen 1" id="imag">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/200/300?random=2" alt="Imagen 2" id="imag">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/200/300?random=1" alt="Imagen 3" id="imag">
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
     <!-- Pie de página del sitio -->
     <footer>
         <p>&copy; 2024 My first website</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let slideIndex = 0; // Inicializa el índice de las imágenes
+
+            // Obtiene todas las imágenes del slider
+            const slides = document.querySelectorAll(".slider-item");
+            const totalSlides = slides.length; // Calcula el número total de imágenes
+
+            // Función para mostrar las imágenes del slider
+            function showSlides() {
+                slides.forEach(slide => {
+                    slide.style.display = "none"; // Oculta todas las imágenes
+                });
+
+                slideIndex++; // Aumenta el índice de la imagen actual
+                if (slideIndex > totalSlides) { slideIndex = 1; } // Reinicia el índice si es mayor que el número total de imágenes
+
+                slides[slideIndex - 1].style.display = "block"; // Muestra la imagen actual
+                setTimeout(showSlides, 2000); // Cambia de imagen cada 2 segundos
+            }
+
+            showSlides(); // Inicia la función para mostrar las imágenes
+        });
+
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function showSlides() {
+            const slides = document.querySelectorAll(".slider-item");
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            slides.forEach((slide, index) => {
+                slide.style.display = index === slideIndex ? "block" : "none";
+            });
+            setTimeout(() => {
+                slideIndex++;
+                showSlides();
+            }, 3000); // Cambia la imagen cada 3 segundos
+        }
+    </script>
+
 </body>
 </html>
