@@ -1,0 +1,159 @@
+/* Estilos globales para el cuerpo del documento */
+body {
+    /* Tipo de letra utilizado */
+    font-family: "Ubuntu", sans-serif;
+    /* Elimina los márgenes y el relleno por defecto */
+    margin: 0;
+    padding: 0;
+    /* Color de fondo del sitio web */
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Estilos para el encabezado */
+header {
+    /* Color de fondo del encabezado */
+    background-color: #2e0a91;
+    /* Color del texto en el encabezado */
+    color: #fff;
+    /* Relleno interno del encabezado */
+    padding: 1rem 0;
+    /* Alineación del texto en el centro */
+    text-align: center;
+    font-family: "Playwrite IT Moderna", cursive;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #260b63;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #1b001f;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #000000;
+}
+
+/* Estilos para el contenido principal */
+main {
+    /* Relleno interno del contenido principal */
+    padding: 1rem;
+}
+
+/* Estilos para el pie de página */
+footer {
+    /* Color de fondo del pie de página */
+    background-color: #170055;
+    /* Color del texto en el pie de página */
+    color: #fff;
+    /* Alineación del texto en el centro */
+    text-align: center;
+    /* Relleno interno del pie de página */
+    padding: 1rem 0;
+    /* Fija el pie de página en la parte inferior de la página */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+iframe {
+    margin-bottom: 20%;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
