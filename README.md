@@ -1,3 +1,3 @@
 # José Román Gaitán Rosales
-En esta pagina se hicieron practicas de html y css.
+En este sitio subiré trabajos que considero que son de calidad en mi travesía al aprender 3D.
 https://rromg.github.io/Practice1_Myfirstwebsite/index.html
